@@ -1,0 +1,52 @@
+<%- layout("/layouts/boilerplate.ejs") %>
+
+<form action="/listings/<%= listing._id %>?_method=PUT" method="post" class="needs-validation" novalidate>
+<div class="row col-6 offset-3">
+    <div class="mt-3">
+        <label for="name" class="form-label">Name:</label>
+        <input type="text" name="name" placeholder="Enter laptop name" class="form-control" value="<%= listing.name %>" required>
+        <div class="valid-feedback">
+            Name Looks good!
+           </div>
+           <div class="invalid-feedback">
+             Please enter a valid name.
+           </div>
+    </div>
+    <br>
+    <div class="mt-3">
+        <label for="description" class="form-label">Description:</label>
+        <input type="text" name="description" class="form-control" placeholder="Enter laptop description" value="<%= listing.description%>" required>
+        <div class="valid-feedback">
+            Description Looks good!
+           </div>
+           <div class="invalid-feedback">
+             Please enter a valid description.
+           </div>
+    </div>
+    <br>
+    <div class="mt-3">
+        <label for="price" class="form-label">Price:</label>
+        <input type="text" name="price" class="form-control" placeholder="Enter price" value="<%= listing.price %>" required>
+        <div class="valid-feedback">
+            Price Looks good!
+           </div>
+           <div class="invalid-feedback">
+             Please enter a valid Price.
+           </div>
+    </div>
+    <br>
+    <div class="mt-3">
+        <label for="image" class="form-label">Image:</label>
+        <input type="text" name="image" class="form-control" placeholder="Enter image URL/LINK" value="<%= listing.image %>" required>
+        <div class="valid-feedback">
+            Image Looks good!
+           </div>
+           <div class="invalid-feedback">
+             Please enter a valid URL/LINK.
+           </div>
+    </div>
+    <br>
+</div>
+<button class="btn btn-success mt-5 mb-5 offset-3">Edit this listing</button>
+
+</form>
